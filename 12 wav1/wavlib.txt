@@ -1,0 +1,33 @@
+This is a brief documentation of the Pier Luca Montessoro's wavlib
+functions that make easy reding, creating, modifying and writing
+audio files (WAV format, 44.1 KHz, 16 bits/sample).
+See also the example programs.
+
+
+DATA TYPES
+----------
+- short int    represent a sample (one channel)
+- WAVE         the wave file stored in memory
+
+
+MACRO
+-----
+- SAMPLE(wave, channel, offset)  returns a short int representing the 
+                                 sample in position offset
+
+
+FUNCTIONS
+---------
+- WAVE  ReadWave (FILE *fp);
+  reads a wave file and returns the data structure representing it in memory
+
+- void  WriteWave (WAVE wave, FILE *fp);
+  writes a wave file
+
+- WAVE  CreateEmptyCDaudioWave (unsigned long int numofstereosamples);
+  creates an empty wave structure in memory
+
+- void  ReleaseWaveData (WAVE *wave);
+  creates an empty wave structure in memory
+
+    
